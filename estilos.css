@@ -18,25 +18,65 @@ html,body{
     margin: 0;
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
-    /*background: var(--Dark-cyan);*/
+    font-family: 'Quicksand', sans-serif;
+    
+    
+}
+body{
+    background: var(--Dark-cyan);
+    height: 100vh;
+    background-image: url(./bg-pattern-bottom.svg),url(./bg-pattern-top.svg);
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .profile-card{
     border-radius: 8px;
     width: 85%;
     margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
 }
 .profile-card-top{
     background-image: url(./bg-pattern-card.svg);
-    
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 .profile-card-top img{
     border-radius: 50%;
     border: 5px solid white;
+    position: absolute;
+    bottom: -53px;
+    
+}
+.profile-card-bottom_datos-del-perfil > div{
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+} 
+.profile-card-bottom_datos-del-perfil > div span:nth-child(1){
+    font-size: var(--Name-stats-Font-size);
+    font-weight: 700;
+    margin-right: 8px;
+}
+.profile-card-bottom_datos-del-perfil >  p{
+    text-align: center;
+    font-size: 14px;
+    color: var(--Dark-gray);
+}
+.profile-card-bottom_datos-del-perfil > div span:nth-child(2){
+    font-size: var(--Name-stats-Font-size);
+    font-weight: 400;
+    color: var(--Dark-gray);
 }
 .profile-card-bottom_datos-de-seguidores{
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid var(--Dark-grayish-blue);
+    border-top: 1px solid var(--Dark-gray);
 }
 .profile-card-bottom_datos-de-seguidores div p:nth-child(1){
     font-size: var(--Name-stats-Font-size);
@@ -48,4 +88,5 @@ html,body{
     color: var(--Dark-gray);
     font-size: 14px;
     text-align: center;
+    margin-top: -16px;
 }
